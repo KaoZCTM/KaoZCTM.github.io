@@ -52,7 +52,7 @@
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">En esta página encontrarás un poco de información sobre mi, lo que veas acá te dará una referencia de mis trabajos pasados, mi formación y un poco más</p>
+                    <p class="text-white-75 mb-5">En esta página encontrarás un resumen de mi trayectoria, donde comparto algunos de mis proyectos, mi formación y un poco sobre mis intereses y las habilidades que he desarrollado a lo largo del tiempo. ¡Espero que te resulte interesante y útil!</p>
                     <a class="btn btn-primary btn-xl" href="#about">Empecemos!</a>
                 </div>
             </div>
@@ -65,10 +65,10 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-white mt-0">Sobre mi</h2>
                     <hr class="divider divider-light" />
-                    <p class="text-white mb-4">Mi nombre es César Gangas, vivo en Chile y soy estudiante de ingenería en informática desde el 2023, mis pasatiempos son los juegos, automatizar procesos, la creación de páginas web entre otros.</p>
-                    <p class="text-white mb-4">Me gusta el desarrollo web más enfocado hacia el backend de las aplicaciones (todo lo que pasa por detrás de una aplicación😶‍🌫️).</p>
-                    <p class="text-white mb-4">Como mencioné, también me gusta automatizar tareas manuales repetitivas (por qué hacerlo manual si puedes dejar a la tecnología que lo haga por tí😎) con lenguaje python y librerías como OpenCV y PyAutoGUI.</p>
-                    <p class="text-white mb-4">Me gusta mantener las buenas relaciones y mantener un ambiente grato con las personas, no soy para nada fácil de hacer enojar y me gusta recibir feedback sobre mis trabajos y mejorar sobre la marcha (por más duro que sean los comentarios)</p><br><br>
+                    <p class="text-white mb-4">Hola, soy César Gangas, vivo en Chile y desde el 2023 estudio Ingeniería en Informática. Me encantan los videojuegos, automatizar cosas aburridas y crear páginas web. Básicamente, me gusta todo lo que tenga que ver con tecnología y resolver problemas.</p>
+                    <p class="text-white mb-4">En el desarrollo web, mi interés personal es el backend (todo lo que pasa detrás de una app, la parte que no se ve 😶‍🌫️). Me gusta pensar en cómo hacer que las aplicaciones funcionen de manera eficiente y sin problemas.</p>
+                    <p class="text-white mb-4">También me gusta automatizar mis tareas repetitivas. ¿Para qué hacer algo manual si puedes hacer que un script lo haga por ti? 😎.</p>
+                    <p class="text-white mb-4">Soy una persona tranquila, me gusta mantener un ambiente divertido y relajado. No me enojo fácilmente y siempre estoy abierto a recibir feedback. Para mí, los comentarios son una forma de mejorar, así que siempre los agradezco.</p><br><br>
                     <a class="btn btn-light btn-xl" href="#services">Vamos a lo técnico!</a>
                 </div>
             </div>
@@ -149,7 +149,7 @@
                         <div class="mb-2 icon-img"><img src="https://img.icons8.com/?size=512&id=21278&format=png" alt=""></div>
                         <h3 class="h4 mb-2">CSS</h3>
                         <p> Intermedio </p>
-                        <p class="text-muted mb-0">Como se centra un div?</p>
+                        <p class="text-muted mb-0">¿Como se centra un div?</p>
                     </div>
                 </div>
 
@@ -158,7 +158,7 @@
                         <div class="mb-2 icon-img"><img src="https://img.icons8.com/?size=512&id=PXTY4q2Sq2lG&format=png" alt=""></div>
                         <h3 class="h4 mb-2">JavaScript</h3>
                         <p> Principiante </p>
-                        <p class="text-muted mb-0">Animaciones? en esta página? donde?</p>
+                        <p class="text-muted mb-0">El "alma" de las web, sería aburrido una página que fuera más estatica que esta.</p>
                     </div>
                 </div>
 
@@ -248,7 +248,7 @@
                                     <div class="project-category text-white-50 mb-3">Programación</div>
                                     <div class="project-name text-white-75 mb-4">Fragmentos de código - automatización de tareas manuales repetitivas</div>
                                     <p class="text-white mb-4">Nada del otro mundo, utilizo la librería de OpenCV y/o PyAutoGUI cada vez que tengo que hacer algo que repetir manualmente muchas veces</p>
-                                    <p class="text-white mb-4">A partir de aquí, estoy adoptando el hábito de documentar mi código en inglés.</p>
+                                    <p class="text-white mb-4">A partir de aquí, estoy adoptando el hábito de comentar mi código en inglés.</p>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +281,7 @@
                     </div>
                 </div>
             </div>
-        </div>                                                                                                                                                                                       <br>
+        </div> <br>
     </div>
     <!-- Contact-->
     <section class="page-section" id="contact">

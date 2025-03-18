@@ -58,51 +58,52 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializa todos los tooltips de Bootstrap
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl, {
-            trigger: 'manual'
-        });
+document.querySelectorAll('.copyEmail').forEach(function(element) {
+    // Initialize the tooltip
+    var tooltip = new bootstrap.Tooltip(element);
+    var hideTimeout;
+
+    element.addEventListener('mouseenter', function() {
+        if (hideTimeout) {
+            clearTimeout(hideTimeout);
+            hideTimeout = null;
+        }
+        tooltip.show();
     });
 
-    document.querySelectorAll('.copyEmail').forEach(function(element) {
-        element.addEventListener('mouseenter', function() {
-            var tooltip = bootstrap.Tooltip.getInstance(this);
-            tooltip.show();
-        });
-
-        element.addEventListener('mouseleave', function() {
-            var tooltip = bootstrap.Tooltip.getInstance(this);
-            setTimeout(function() {
-                tooltip.hide();
-            }, 500); // Hide the tooltip after x miliseconds
-        });
-
-        element.addEventListener('click', function() {
-            var copyText = this.getAttribute('data-copy');
-            
-            var tempInput = document.createElement('input');
-            tempInput.value = copyText;
-            document.body.appendChild(tempInput);
-            
-            tempInput.select();
-            tempInput.setSelectionRange(0, 99999); // For mobile devices
-            
-            document.execCommand('copy');
-            
-            document.body.removeChild(tempInput);
-            
-            var tooltip = bootstrap.Tooltip.getInstance(this);
+    element.addEventListener('mouseleave', function() {
+        if (!tooltip._isShown) return;
+        hideTimeout = setTimeout(function() {
             tooltip.hide();
-            this.setAttribute('data-bs-original-title', '¡Copiado al portapapeles!');
-            tooltip.show();
-            
-            setTimeout(() => {
-                tooltip.hide();
-                this.setAttribute('data-bs-original-title', 'Click para copiar');
-            }, 1500); // Show the tooltip for x miliseconds
-        });
+        }, 500); // Hide the tooltip after x milliseconds
+    });
+
+    element.addEventListener('click', function() {
+        var copyText = element.getAttribute('data-copy');
+        
+        var tempInput = document.createElement('input');
+        tempInput.value = copyText;
+        document.body.appendChild(tempInput);
+        
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // For mobile devices
+        
+        document.execCommand('copy');
+        
+        document.body.removeChild(tempInput);
+        
+        if (hideTimeout) {
+            clearTimeout(hideTimeout);
+            hideTimeout = null;
+        }
+        
+        tooltip.hide();
+        element.setAttribute('data-bs-original-title', '¡Copiado al portapapeles!');
+        tooltip.show();
+        
+        setTimeout(() => {
+            tooltip.hide();
+            element.setAttribute('data-bs-original-title', 'Click para copiar');
+        }, 3000); // Show the tooltip for x milliseconds
     });
 });
